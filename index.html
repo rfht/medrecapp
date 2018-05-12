@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Med Rec App</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="author" content="Thomas Frohwein">
+	</head>
+	<body>
+		<h1>Medication Reconciliation App</h1>
+		<p><em>Disclaimer: You use this program at your own risk. No warranty on function or output. It is your responsibility to double-check the output if you use it. I assume no responsibility for the use.</em></p>
+		<p>This program is currently in <em>pre-alpha state</em>. It is provided under the <a href="license.txt">2-clause BSD license</a>.
+
+		<form id="inputForm">
+			Input medication list here. Example format: Acetaminophen 325mg q6h PO PRN pain<br>
+			<textarea name="textinput" rows="10" cols="50" required value="">
+			</textarea><br>
+			<input type="button" onclick="submitFunction()" value="Submit">
+		</form>
+
+		<div id="tableDiv">
+			<table id="responsiveTable">
+			</table>
+		</div>
+
+		<div id="outputDiv">
+			<input type="button" id="outputButton" onclick="createOutput()" value="Create Reconciled List">
+			<p id="output"></p>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
